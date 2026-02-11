@@ -159,3 +159,6 @@ deepagentsjs-main/
 docs/
 
 .cursor
+# WindsurfChatOpen
+.windsurfchatopen/
+.windsurfrules
