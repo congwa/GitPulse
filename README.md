@@ -1,6 +1,6 @@
 # GitPulse — 用数据讲述团队的代码故事
 
-![GitPulse Dashboard](http://qiniu.biomed168.com/pic/dashboard.png)
+![GitPulse Dashboard](screenshot/dashboard.png)
 
 GitPulse 是一款基于 Tauri + React 的桌面应用，通过解析 Git 仓库历史记录，结合 AI 智能分析，为开发团队提供全方位的代码贡献洞察、团队协作诊断和代码质量评估。
 
@@ -8,13 +8,13 @@ GitPulse 是一款基于 Tauri + React 的桌面应用，通过解析 Git 仓库
 
 ### 仪表盘
 
-![仪表盘](http://qiniu.biomed168.com/pic/dashboard.png)
+![仪表盘](screenshot/dashboard.png)
 
 项目全局概览，自动展示关键指标：总提交数、活跃成员、代码行数、涉及文件数。包含提交趋势折线图、提交类型分布饼图、活跃时段热力图（7×24），以及 AI 自动生成的项目概况总结。
 
 ### 团队全景
 
-![团队全景](http://qiniu.biomed168.com/pic/role.png)
+![团队全景](screenshot/role.png)
 
 成员贡献排行、能力雷达图、贡献趋势对比。支持按时间范围筛选，一目了然地看到谁是核心贡献者、谁的活跃度在下降。AI 自动生成团队洞察，包含风险预警、亮点发现和优化建议。
 
@@ -28,7 +28,7 @@ GitPulse 是一款基于 Tauri + React 的桌面应用，通过解析 Git 仓库
 
 ### 模块分析
 
-![模块分析](http://qiniu.biomed168.com/pic/module.png)
+![模块分析](screenshot/module.png)
 
 以树状图展示代码模块归属关系，直观呈现每个模块的所有者、提交热度和协作情况。帮助识别"知识孤岛"和巴士因子风险。
 
@@ -149,7 +149,7 @@ shirehub_studio_web_demo/
 
 ## 快速开始
 
-![首页](http://qiniu.biomed168.com/pic/home.png)
+![首页](screenshot/home.png)
 
 ```bash
 # 安装依赖
@@ -167,7 +167,7 @@ pnpm tauri build
 
 ## 配置 AI
 
-![设置页面](http://qiniu.biomed168.com/pic/setting.png)
+![设置页面](screenshot/setting.png)
 
 首次使用需在设置页面配置 AI 服务商：
 
@@ -186,22 +186,22 @@ pnpm tauri build
 
 | 首页 | 仪表盘 | 团队全景 |
 |------|--------|----------|
-| ![首页](http://qiniu.biomed168.com/pic/home.png) | ![仪表盘](http://qiniu.biomed168.com/pic/dashboard.png) | ![团队全景](http://qiniu.biomed168.com/pic/role.png) |
+| ![首页](screenshot/home.png) | ![仪表盘](screenshot/dashboard.png) | ![团队全景](screenshot/role.png) |
 
 | 模块分析 | 设置页面 | 首次进入 |
 |----------|----------|----------|
-| ![模块分析](http://qiniu.biomed168.com/pic/module.png) | ![设置页面](http://qiniu.biomed168.com/pic/setting.png) | ![首次进入](http://qiniu.biomed168.com/pic/first-enter.png) |
+| ![模块分析](screenshot/module.png) | ![设置页面](screenshot/setting.png) | ![首次进入](screenshot/first-enter.png) |
 
 ### 功能展示
 
 | 加载界面 | 检查界面 | 备用界面 |
 |----------|----------|----------|
-| ![加载界面](http://qiniu.biomed168.com/pic/loading.png) | ![检查界面](http://qiniu.biomed168.com/pic/check.png) | ![备用界面](http://qiniu.biomed168.com/pic/first-enter2.png) |
+| ![加载界面](screenshot/loading.png) | ![检查界面](screenshot/check.png) | ![备用界面](screenshot/first-enter2.png) |
 
 ### 其他界面
 
 | 检查界面2 |
 |-----------|
-| ![检查界面2](http://qiniu.biomed168.com/pic/check2.png) |
+| ![检查界面2](screenshot/check2.png) |
 
 </details>
