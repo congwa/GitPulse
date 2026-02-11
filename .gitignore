@@ -147,7 +147,6 @@ crash.log
 !.gitmodules
 
 # 项目特定的忽略
-screenshot/
 design-system/dist/
 langchainjs-main/
 langgraphjs-main/
