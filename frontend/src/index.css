@@ -1,0 +1,268 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+/* ============================================
+   GitPulse Design System — Tailwind v4
+   Style: Soft Claymorphism + Bento Grid
+   ============================================ */
+
+/* Step 1: CSS Variables at Root (NOT inside @layer) */
+
+:root {
+  /* Background & Surface */
+  --background: hsl(25 100% 98%);
+  --foreground: hsl(10 16% 21%);
+  --surface: hsl(0 0% 100%);
+  --surface-hover: hsl(22 100% 95%);
+
+  /* Primary — 蜜桃橘 */
+  --primary: hsl(14 100% 71%);
+  --primary-soft: hsl(14 100% 88%);
+  --primary-foreground: hsl(0 0% 100%);
+
+  /* Secondary — 薰衣草紫 */
+  --secondary: hsl(258 72% 76%);
+  --secondary-soft: hsl(258 85% 92%);
+  --secondary-foreground: hsl(0 0% 100%);
+
+  /* Accent — 薄荷绿 */
+  --accent: hsl(160 59% 51%);
+  --accent-soft: hsl(160 76% 82%);
+  --accent-foreground: hsl(0 0% 100%);
+
+  /* Semantic */
+  --warning: hsl(45 93% 56%);
+  --danger: hsl(350 95% 72%);
+  --danger-foreground: hsl(0 0% 100%);
+
+  /* Text */
+  --text: hsl(10 16% 21%);
+  --text-secondary: hsl(10 5% 52%);
+  --text-muted: hsl(10 4% 73%);
+
+  /* Border */
+  --border: hsl(22 27% 90%);
+  --border-focus: hsl(14 100% 71%);
+
+  /* Shadows */
+  --shadow-card: 0 4px 14px rgba(255,140,107,0.08), 0 1px 3px rgba(0,0,0,0.04);
+  --shadow-card-hover: 0 8px 25px rgba(255,140,107,0.15), 0 2px 6px rgba(0,0,0,0.06);
+  --shadow-button: 0 2px 8px rgba(255,140,107,0.2);
+  --shadow-glow: 0 0 20px rgba(255,140,107,0.15);
+
+  /* Radii */
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-xl: 20px;
+  --radius-2xl: 24px;
+
+  /* shadcn compatibility */
+  --radius: 12px;
+  --card: hsl(0 0% 100%);
+  --card-foreground: hsl(10 16% 21%);
+  --popover: hsl(0 0% 100%);
+  --popover-foreground: hsl(10 16% 21%);
+  --muted: hsl(22 27% 90%);
+  --muted-foreground: hsl(10 5% 52%);
+  --destructive: hsl(350 95% 72%);
+  --destructive-foreground: hsl(0 0% 100%);
+  --input: hsl(22 27% 90%);
+  --ring: hsl(14 100% 71%);
+
+  /* Chart palette — 成员配色 */
+  --chart-1: hsl(14 100% 71%);
+  --chart-2: hsl(258 72% 76%);
+  --chart-3: hsl(160 59% 51%);
+  --chart-4: hsl(340 82% 71%);
+  --chart-5: hsl(199 89% 61%);
+  --chart-6: hsl(45 93% 56%);
+  --chart-7: hsl(27 95% 61%);
+  --chart-8: hsl(271 81% 76%);
+
+  /* Sidebar */
+  --sidebar-background: hsl(0 0% 100%);
+  --sidebar-foreground: hsl(10 5% 52%);
+  --sidebar-primary: hsl(14 100% 71%);
+  --sidebar-primary-foreground: hsl(0 0% 100%);
+  --sidebar-accent: hsl(22 100% 95%);
+  --sidebar-accent-foreground: hsl(10 16% 21%);
+  --sidebar-border: hsl(22 27% 90%);
+  --sidebar-ring: hsl(14 100% 71%);
+}
+
+.dark {
+  --background: hsl(330 19% 9%);
+  --foreground: hsl(20 18% 94%);
+  --surface: hsl(340 15% 15%);
+  --surface-hover: hsl(340 12% 19%);
+
+  --primary: hsl(14 100% 75%);
+  --primary-soft: hsl(14 30% 19%);
+  --primary-foreground: hsl(330 19% 9%);
+
+  --secondary: hsl(258 80% 81%);
+  --secondary-soft: hsl(258 20% 20%);
+  --secondary-foreground: hsl(330 19% 9%);
+
+  --accent: hsl(160 68% 67%);
+  --accent-soft: hsl(160 20% 15%);
+  --accent-foreground: hsl(330 19% 9%);
+
+  --warning: hsl(45 93% 62%);
+  --danger: hsl(350 90% 78%);
+  --danger-foreground: hsl(330 19% 9%);
+
+  --text: hsl(20 18% 94%);
+  --text-secondary: hsl(10 5% 63%);
+  --text-muted: hsl(10 5% 37%);
+
+  --border: hsl(340 10% 22%);
+  --border-focus: hsl(14 100% 75%);
+
+  --shadow-card: 0 4px 14px rgba(0,0,0,0.3), 0 1px 3px rgba(0,0,0,0.2);
+  --shadow-card-hover: 0 8px 25px rgba(0,0,0,0.4), 0 2px 6px rgba(0,0,0,0.25);
+  --shadow-button: 0 2px 8px rgba(0,0,0,0.3);
+  --shadow-glow: 0 0 20px rgba(255,158,128,0.1);
+
+  --card: hsl(340 15% 15%);
+  --card-foreground: hsl(20 18% 94%);
+  --popover: hsl(340 15% 15%);
+  --popover-foreground: hsl(20 18% 94%);
+  --muted: hsl(340 10% 22%);
+  --muted-foreground: hsl(10 5% 63%);
+  --destructive: hsl(350 90% 78%);
+  --destructive-foreground: hsl(330 19% 9%);
+  --input: hsl(340 10% 22%);
+  --ring: hsl(14 100% 75%);
+
+  --chart-1: hsl(14 100% 75%);
+  --chart-2: hsl(258 80% 81%);
+  --chart-3: hsl(160 68% 67%);
+  --chart-4: hsl(340 82% 76%);
+  --chart-5: hsl(199 89% 65%);
+  --chart-6: hsl(45 93% 62%);
+  --chart-7: hsl(27 95% 65%);
+  --chart-8: hsl(271 81% 80%);
+
+  --sidebar-background: hsl(340 15% 15%);
+  --sidebar-foreground: hsl(10 5% 63%);
+  --sidebar-primary: hsl(14 100% 75%);
+  --sidebar-primary-foreground: hsl(330 19% 9%);
+  --sidebar-accent: hsl(340 12% 19%);
+  --sidebar-accent-foreground: hsl(20 18% 94%);
+  --sidebar-border: hsl(340 10% 22%);
+  --sidebar-ring: hsl(14 100% 75%);
+}
+
+/* Step 2: Map to Tailwind utilities via @theme inline */
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-surface: var(--surface);
+  --color-surface-hover: var(--surface-hover);
+
+  --color-primary: var(--primary);
+  --color-primary-soft: var(--primary-soft);
+  --color-primary-foreground: var(--primary-foreground);
+
+  --color-secondary: var(--secondary);
+  --color-secondary-soft: var(--secondary-soft);
+  --color-secondary-foreground: var(--secondary-foreground);
+
+  --color-accent: var(--accent);
+  --color-accent-soft: var(--accent-soft);
+  --color-accent-foreground: var(--accent-foreground);
+
+  --color-warning: var(--warning);
+  --color-danger: var(--danger);
+  --color-danger-foreground: var(--danger-foreground);
+
+  --color-text: var(--text);
+  --color-text-secondary: var(--text-secondary);
+  --color-text-muted: var(--text-muted);
+
+  --color-border: var(--border);
+  --color-border-focus: var(--border-focus);
+
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --color-chart-6: var(--chart-6);
+  --color-chart-7: var(--chart-7);
+  --color-chart-8: var(--chart-8);
+
+  --color-sidebar-background: var(--sidebar-background);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+
+  --radius-sm: var(--radius-sm);
+  --radius-md: var(--radius-md);
+  --radius-lg: var(--radius-lg);
+  --radius-xl: var(--radius-xl);
+
+  --font-heading: 'Varela Round', system-ui, sans-serif;
+  --font-body: 'Nunito Sans', system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+}
+
+/* Step 3: Base styles */
+
+@layer base {
+  * {
+    border-color: var(--border);
+  }
+  body {
+    background-color: var(--background);
+    color: var(--foreground);
+    font-family: var(--font-body);
+  }
+}
+
+/* Utility: smooth bounce easing */
+@utility bounce-transition {
+  transition: all 250ms cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--text-muted);
+}

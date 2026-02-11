@@ -1,0 +1,41 @@
+{
+  "$schema": "https://raw.githubusercontent.com/nicoverbruggen/tauri-v2-schema/main/tauri.conf.json",
+  "productName": "GitPulse",
+  "version": "0.3.1",
+  "identifier": "com.gitpulse.desktop",
+  "build": {
+    "frontendDist": "../dist",
+    "devUrl": "http://localhost:1420",
+    "beforeDevCommand": "pnpm dev",
+    "beforeBuildCommand": "pnpm build"
+  },
+  "app": {
+    "windows": [
+      {
+        "title": "GitPulse — 用数据讲述团队的代码故事",
+        "width": 1280,
+        "height": 800,
+        "minWidth": 960,
+        "minHeight": 600,
+        "resizable": true,
+        "center": true,
+        "decorations": true,
+        "titleBarStyle": "Visible"
+      }
+    ],
+    "security": {
+      "csp": null
+    }
+  },
+  "bundle": {
+    "active": true,
+    "targets": "all",
+    "icon": [
+      "icons/32x32.png",
+      "icons/128x128.png",
+      "icons/128x128@2x.png",
+      "icons/icon.icns",
+      "icons/icon.ico"
+    ]
+  }
+}
